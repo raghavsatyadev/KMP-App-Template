@@ -20,6 +20,9 @@ kotlin {
         }
     }
 
+
+    jvm("desktop")
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -35,6 +38,10 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.androidx.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.okhttp)
+        }
+        val desktopMain by getting
+        desktopMain.dependencies {
             implementation(libs.ktor.client.okhttp)
         }
         iosMain.dependencies {
