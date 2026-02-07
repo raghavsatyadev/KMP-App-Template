@@ -16,6 +16,7 @@ kotlin {
             implementation(compose.desktop.currentOs)
             implementation(projects.composeApp)
             implementation(libs.kotlinx.coroutines.swing)
+            implementation(libs.logback.classic)
         }
     }
 }
